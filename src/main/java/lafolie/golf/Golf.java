@@ -15,5 +15,6 @@ public class Golf implements ModInitializer
 	{
 		GolfBlocks.init();
 		GolfItems.init();
+		GolfEntities.init();
 	}
 }
