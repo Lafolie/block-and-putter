@@ -22,7 +22,7 @@ loom {
     splitEnvironmentSourceSets()
 
 	mods {
-		"modid" {
+		"block-and-putter" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}
