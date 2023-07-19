@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"lafolie.golf.ExampleMod"
+			"lafolie.golf.Golf"
 		],
 		"client": [
-			"lafolie.golf.ExampleModClient"
+			"lafolie.golf.GolfClient"
 		]
 	},
 	"mixins": [
