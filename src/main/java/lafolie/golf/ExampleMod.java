@@ -1,4 +1,4 @@
-package com.example;
+package lafolie.golf;
 
 import net.fabricmc.api.ModInitializer;
 

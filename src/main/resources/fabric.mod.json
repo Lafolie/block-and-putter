@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "block-and-putter",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Block and Putter",
+	"description": "Golf content for Minecraft.",
 	"authors": [
 		"Me!"
 	],
@@ -16,16 +16,16 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"lafolie.golf.ExampleMod"
 		],
 		"client": [
-			"com.example.ExampleModClient"
+			"lafolie.golf.ExampleModClient"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
+		"golf.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "golf.client.mixins.json",
 			"environment": "client"
 		}
 	],
