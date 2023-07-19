@@ -13,6 +13,7 @@ public class Golf implements ModInitializer
 	@Override
 	public void onInitialize()
 	{
-	
+		GolfBlocks.init();
+		GolfItems.init();
 	}
 }
