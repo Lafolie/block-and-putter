@@ -26,7 +26,6 @@ public class GolfBallEntityRenderer extends EntityRenderer<GolfBallEntity>
 	@Override
 	public Identifier getTexture(GolfBallEntity var1)
 	{
-		// TODO Auto-generated method stub
 		return GolfIdentifier.content("textures/entity/golf_ball/golf_ball.png");
 	}
 

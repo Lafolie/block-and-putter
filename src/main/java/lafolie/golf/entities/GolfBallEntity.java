@@ -4,6 +4,7 @@ import lafolie.golf.GolfItems;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class GolfBallEntity extends PersistentProjectileEntity
@@ -19,6 +20,13 @@ public class GolfBallEntity extends PersistentProjectileEntity
 		//TODO Auto-generated constructor stub
 	}
 
+	public void hitWithClub(Vec3d velocity)
+	{
+		inGround = false;
+		Vec3d pos = getPos();
+		setPosition(pos.x, pos.y + 0.5, pos.z);
+		setVelocity(velocity);
+	}
 	// @Override
 	// protected void initDataTracker()
 	// {

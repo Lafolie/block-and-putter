@@ -16,10 +16,10 @@ import net.minecraft.world.World;
 
 public class GolfClub extends Item
 {
-	private double pitchOffset;
+	private float pitchOffset;
 	private double drivePower;
 
-	public GolfClub(Settings settings, double pitchOffset, double drivePower)
+	public GolfClub(Settings settings, float pitchOffset, double drivePower)
 	{
 		super(settings);
 		this.pitchOffset = pitchOffset;
@@ -39,12 +39,20 @@ public class GolfClub extends Item
 		if(ball != null)
 		{
 			Golf.LOG.info("Hit a ball!");
+			hitBall(ball, playerEnt);
 			return TypedActionResult.success(playerEnt.getStackInHand(hand));
 		}
 		else
 		{
 			return TypedActionResult.pass(playerEnt.getStackInHand(hand));
 		}
+	}
+
+	private void hitBall(GolfBallEntity ball, PlayerEntity playerEnt)
+	{
+		Golf.LOG.info("Pitch: {}", playerEnt.getPitch());
+		Vec3d forward = Vec3d.fromPolar(playerEnt.getPitch() + pitchOffset, playerEnt.getYaw());
+		ball.hitWithClub(forward.multiply(drivePower));
 	}
 
 	private Box getCollisionBox(PlayerEntity playerEnt)

@@ -11,7 +11,7 @@ public final class GolfItems
 {
 	private GolfItems() {}
 
-	public static final GolfClub CLUB = new GolfClub(new FabricItemSettings().maxCount(1), 0d, 32d);
+	public static final GolfClub CLUB = new GolfClub(new FabricItemSettings().maxCount(1), 0f, 2d);
 	public static final Item GOLF_BALL = new Item(new FabricItemSettings().maxCount(64));
 
 
