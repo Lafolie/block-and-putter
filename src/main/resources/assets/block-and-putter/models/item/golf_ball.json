@@ -2,6 +2,6 @@
 	"parent": "item/generated",
 	"textures": 
 	{
-		"layer0": "minecraft:item/snowball"
+		"layer0": "block-and-putter:entity/golf_ball/golf_ball"
 	}
 }
